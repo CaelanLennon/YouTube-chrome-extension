@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YT Note Bookmark Saver",
+    "version": "1.0",
+    "description": "A Chrome extension that allows users to save notes and bookmarks for YouTube videos.",
+    "permissions": [
+        "storage",
+        "activeTab"],
+    "action":{
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/watch*"],
+            "js": ["content.js"]
+        }
+    ]
+
+}
